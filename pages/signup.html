@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivre註冊</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    
+    <main>
+      <section class="container py-lg-10 py-9">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <div class="bg-white border p-lg-7 p-5 border-primary-300 rounded-1">
+              <h1 class="fs-4 text-accent-200 mb-lg-7 mb-5">註冊</h1>
+              <form class="mb-lg-7 mb-5" >
+                <div class="mb-3">
+                  <label for="exampleInputaccount" class="fw-bolder form-label mb-lg-2">會員帳號</label>
+                  <input type="account" class="form-control font-weight-bold bg-neutral-100 border-0 py-2 ps-3" id="exampleInputaccount" aria-describedby="accountHelp" placeholder="請輸入會員帳號">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword" class="fw-bolder form-label mb-lg-2">密碼</label>
+                  <input type="password" class="form-control font-weight-bold bg-neutral-100 border-0 py-2 ps-3" id="exampleInputPassword" placeholder="請輸入密碼">
+                </div>
+                <div class="mb-lg-7 mb-5">
+                  <label for="exampleInputemail" class="fw-bolder form-label mb-lg-2">電子信箱</label>
+                  <input type="email" class="form-control font-weight-bold bg-neutral-100 border-0 py-2 ps-3" id="exampleInputemail" placeholder="請輸入電子郵件帳號">
+                </div>
+                <div class="d-grid mx-auto">
+                  <button type="submit" class="btn btn-accent-200 text-white">立即註冊<i class="ms-2 bi bi-arrow-right"></i></button>
+                </div>
+              </form>
+              <div class="d-flex align-items-center mb-5 mb-lg-7">
+                <div style=" height: 1px; width: 100%; background: #DEE2E6;"></div>
+                <span class="px-2 text-center text-nowrap text-neutral-300">或以其他方式註冊</span>
+                <div style=" height: 1px; width: 100%; background: #DEE2E6;"></div>
+              </div>
+              <div class="mb-lg-7 mb-5">
+                <div class="d-grid mx-auto mb-1">
+                  <button type="submit" class="btn btn-neutral-100" style="color:#52525b;">
+                    <img src="/assets/images/icons-google.png" alt="" class="me-2">使用 Google 註冊</button>
+                </div>
+                <div class="d-grid mx-auto">
+                  <button type="submit" class="btn btn-neutral-100" style="color:#52525b;">
+                    <img src="/assets/images/icons-facebook.png" alt="" class="me-2">使用 Facebook 註冊</button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <p class="me-2" style="color:#212121;">已經是會員了嗎?</p>
+                <a class="link-accent-200" href="login.html">點此登入</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
