@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivre會員登入</title>
+    <script type="module" crossorigin src="/Vivre.week6.html/assets/main-bdd26176.js"></script>
+    <link rel="stylesheet" href="/Vivre.week6.html/assets/main-592cb9a2.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-0">
+    <div class="container border-bottom py-lg-6 py-5">
+        <a class="navbar-brand fs-1 me-8" href="index.html">Vivre</a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex me-auto mt-2 position-relative mb-5 mb-lg-0" role="search" >
+                <input class="bg-white text-neutral-300 form-control form-control-lg me-2 rounded-pill" type="search" placeholder="搜尋文章" aria-label="Search" />
+                <a class="link-accent-200" href="#"><i class="fs-4 position-absolute bi bi-search top-50 end-0 translate-middle-y me-6"></i></a>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item me-4 mb-5 mb-lg-0">
+                    <a class="nav-link active" aria-current="page" href="index.html">所有文章</a>
+                </li>
+                <li class="nav-item me-4 mb-5 mb-lg-0">
+                    <a class="nav-link" href="index.html">訂閱方案</a>
+                </li>
+                <li class="nav-item me-4 mb-5 mb-lg-0">
+                    <a class="nav-link" href="index.html">關於我們</a>
+                </li>
+            </ul>
+            <div class="d-grid">
+                <button type="button" class="btn btn-accent-200 px-5 fs-6 text-white" >
+                    <a class="nav-link" href="login.html">登入 / 註冊</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>    <main>
+      <section class="container py-lg-10 py-9">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <div class="bg-white border p-lg-7 p-5 border-primary-300 rounded-1">
+              <h1 class="fs-4 text-accent-200 mb-lg-7 mb-5">登入</h1>
+              <form class="mb-lg-7 mb-5" >
+                <div class="mb-3">
+                  <label for="exampleInputaccount" class="fw-bolder form-label mb-lg-2">會員帳號</label>
+                  <input type="account" class="form-control font-weight-bold bg-neutral-100 border-0 py-2 ps-3" id="exampleInputaccount" aria-describedby="accountHelp" placeholder="請輸入會員帳號">
+                </div>
+                <div class="mb-lg-7 mb-5">
+                  <label for="exampleInputPassword" class="fw-bolder form-label mb-lg-2">密碼</label>
+                  <input type="password" class="form-control font-weight-bold bg-neutral-100 border-0 py-2 ps-3" id="exampleInputPassword" placeholder="請輸入密碼">
+                </div>
+                <div class="d-grid mx-auto">
+                  <button type="submit" class="btn btn-accent-200 text-white">立即登入<i class="ms-2 bi bi-arrow-right"></i></button>
+                </div>
+              </form>
+              <div class="d-flex align-items-center mb-5 mb-lg-7">
+                <div style=" height: 1px; width: 100%; background: #DEE2E6;"></div>
+                <span class="px-2 text-center text-nowrap text-neutral-300">或以其他方式登入</span>
+                <div style=" height: 1px; width: 100%; background: #DEE2E6;"></div>
+              </div>
+              <div class="mb-lg-7 mb-5">
+                <div class="d-grid mx-auto mb-1">
+                  <button type="submit" class="btn btn-neutral-100" style="color:#52525b;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgBtZM/T8JAGMafa4kQHSSMTCXRxMRBMK5GOjqYlNFJ/QAmTqyIg3HzIwCLjnQwrpToZqJFXRyMXYxOSmQAIuV8j9YGShv/RJ/k7tr33v7e5/4U+COxsAmeRRw2NMpQBgEJJvUmM2B9C+QCDulxE8EqQ0bRD2Q+iII+auCui3AZ7AzqcCDyBcSgUg0amxRfoTFLzSJHW36yB8KiXMCF/QkRH+bYOYGGHS/TnsnB+zRYGq/FFEj8AZc2cEqtw3NkXccP5DiS+2lwJlwBc7LBVrsjkGS+sRsGYJGI/rg/bzogLqWpc2YmWd2fzMEKYSD0eqI3pfEZHscv5DhitHmuodv3xALwNJLEwIsYdbhBgzJ4kZnp5IiJGl1CKfp63J7FUXtGhNSTnG4EVU7mrzWqWfWgkp16PshYg6UxFc291lLFhQhV16qa5odkSztZGkqeU4aygHiOhLSqFqeDv+LwXUigTknTFE8LVusthfu7ddh21OKsr46BXJhCsJoPNqZuJ2HdNLY9iNDIqek53aKbpBK9EgYRy5mKvWSGIWOOAtyl3SXRbwhrgmpRsSb+Ux8DMpnpdyeTfAAAAABJRU5ErkJggg==" alt="" class="me-2">使用 Google 登入</button>
+                </div>
+                <div class="d-grid mx-auto">
+                  <button type="submit" class="btn btn-neutral-100" style="color:#52525b;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFtSURBVHgBvVO9SsRAEJ7d5OQKD9MdJ4gRfABLKznxAbTTVvEKnyLJA1hfcYpoZ2djf/oE2sqBsTEICgFF1Euyzk6SY/N3P819ELIz+fbb2ZkvAPNC/cIz5TOJx8qSes9rCxAWgNjA0EjSPrJvahp3fg5b7kQh3vMsBpENYyCA21Gn5VQKVYkYCxxWG5zWjx9BqdhIqN71zKEePedFds06nG8ZJCaxfv0G7meYbI62g85KX671dMOwFll4TAGnm0skcvX0De5XCP6vUK6oYR8hK4TZPSi5krmo0fro3i+eEg+DENfbpfEaRaHSoWYoqTX0KsZgvwlmQxvFwfEyvfWz11J+XNEJ+SJT+wv2I22qhFzfeX/5/X7qKaUi9oB3bqfRzu079Wdw0KRYTqsANGi2IsqFDsyIEF1eEJJ+QF9MLUZc5Vfh6kcUs6cRkxzJVXM8T5KEMOBr2K9Lzpk6AJ8x1k/cbMOsEEKY8oF54R/eZYMUmIQwhAAAAABJRU5ErkJggg==" alt="" class="me-2">使用 Facebook 登入</button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <p class="me-2" style="color:#212121;">還不是會員嗎?</p>
+                <a class="link-accent-200" href="signup.html">點此註冊</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container border-top py-lg-5">
+    <dir class="d-flex justify-content-center">
+        <p class="text-primary-400">©Vivre 2024 All right Reserved</p>
+    </dir>
+</footer> 
+    
+  </body>
+</html>
